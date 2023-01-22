@@ -1,17 +1,18 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
-import Navbar from "../src/components/Navbar";
-import CallToAction from "../src/components/CallToAction";
-import Footer from "../src/components/Footer";
+import About from "../src/components/about";
+import Portfolio from "../src/components/portfolio";
+import Contact from "../src/components/contact";
+import Hero from "../src/components/hero";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
-      <CallToAction />
+      <Hero />
+      <About />
+      <Portfolio />
+      <Contact />
     </>
   );
 }
