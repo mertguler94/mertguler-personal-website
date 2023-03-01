@@ -1,15 +1,34 @@
+import { useEffect, useState } from "react";
+import getRepositories, { RepoInterface } from "../api/get-repositories";
+import RepoCard from "./RepoCard";
+
 function Portfolio() {
+  const [repos, setRepos] = useState<RepoInterface[]>([]);
+
+  useEffect(() => {
+    const fetchRepositories = async () => {
+      const data = await getRepositories();
+      if (!data) return;
+      setRepos(data);
+    };
+
+    fetchRepositories();
+  }, []);
+
   return (
     <section
       id="portfolio"
-      className="min-h-[90vh] p-36 flex  items-center flex-col gap-10"
+      className="min-h-screen flex justify-center items-center flex-col gap-10"
     >
-      <h1>Portfolio</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veniam
-        laudantium laborum dicta, amet autem unde. Temporibus debitis officiis,
-        autem iusto unde nam, rerum aut tenetur quis alias facilis ullam?
-      </p>
+      <h1 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white ">
+        Portfolio
+      </h1>
+
+      <div className="grid grid-cols-3 gap-24 items-center">
+        {repos.map((repo) => (
+          <RepoCard key={repo.id} repo={repo} />
+        ))}
+      </div>
     </section>
   );
 }

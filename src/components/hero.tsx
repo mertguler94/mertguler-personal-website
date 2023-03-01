@@ -5,7 +5,7 @@ import { socialLinks } from "../util/social";
 
 function Hero() {
   return (
-    <section id="hero" className="flex items-center min-h-screen mb-64 mt-8">
+    <section id="hero" className="flex items-center min-h-screen mb-64">
       <div className="flex justify-center flex-col gap-10 w-3/5">
         <div className="w-full flex flex-col gap-4">
           <h1 className="text-9xl my-4">
@@ -28,7 +28,7 @@ function Hero() {
         {/* social media icons */}
         <div className="flex gap-10">
           {socialLinks.map((social) => (
-            <Link key={social.id} href={social.href}>
+            <Link key={social.id} href={social.href} target="_blank">
               <social.icon size={48} className="hover:text-[#4fadfd]" />
             </Link>
           ))}

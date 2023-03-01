@@ -7,7 +7,9 @@ function About() {
       id="about"
       className="min-h-screen p-36 flex  items-center flex-col gap-10"
     >
-      <h1 className="text-5xl ">About Me</h1>
+      <h1 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white  ">
+        About Me
+      </h1>
       <div className="flex justify-center items-center gap-10">
         <Image src={logo} alt="Mock image" />
         <p className="w-2/5 text-xl text">

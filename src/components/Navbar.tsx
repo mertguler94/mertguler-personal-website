@@ -15,7 +15,7 @@ function Navbar() {
   }, []);
 
   return (
-    <header>
+    <header className="h-20">
       <nav
         className={`${
           sticky ? "bg-black opacity-90" : "bg-transparent"
