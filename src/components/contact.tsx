@@ -2,7 +2,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen p-36 flex  items-center flex-col gap-10"
+      className="min-h-screen p-36 flex  items-center flex-col gap-4"
     >
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white ">
@@ -16,7 +16,7 @@ function Contact() {
           <div>
             <label
               htmlFor="email"
-              className="block mb-2 text-sm font-medium text-gray-900 "
+              className="block mb-2 text-sm font-medium text-white "
             >
               Your email
             </label>
@@ -30,8 +30,23 @@ function Contact() {
           </div>
           <div>
             <label
+              htmlFor="yourName"
+              className="block mb-2 text-sm font-medium text-white "
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              id="yourName"
+              className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div>
+            <label
               htmlFor="subject"
-              className="block mb-2 text-sm font-medium text-gray-900 "
+              className="block mb-2 text-sm font-medium text-white "
             >
               Subject
             </label>
@@ -46,7 +61,7 @@ function Contact() {
           <div className="sm:col-span-2">
             <label
               htmlFor="message"
-              className="block mb-2 text-sm font-medium text-gray-900 "
+              className="block mb-2 text-sm font-medium text-white"
             >
               Your message
             </label>
