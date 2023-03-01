@@ -8,7 +8,7 @@ export interface RepoInterface {
 export default async function getRepositories() {
   try {
     const res = await fetch(
-      "https://api.github.com/users/mertguler94/repos?per_page=6",
+      "https://api.github.com/users/mertguler94/repos?per_page=6&sort=updated",
       {
         headers: {
           "Content-Type": "application/json",

@@ -20,9 +20,14 @@ function Portfolio() {
       id="portfolio"
       className="min-h-screen flex justify-center items-center flex-col gap-10"
     >
-      <h1 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white ">
-        Portfolio
-      </h1>
+      <div>
+        <h1 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white ">
+          Portfolio
+        </h1>
+        <p className="text-center tracking-tight">
+          <i>Last 6 Public Repositories</i>
+        </p>
+      </div>
 
       <div className="grid grid-cols-3 gap-24 items-center">
         {repos.map((repo) => (

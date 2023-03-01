@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import about from "../../public/about.png";
 
 function About() {
   return (
@@ -11,7 +11,7 @@ function About() {
         About Me
       </h1>
       <div className="flex justify-center items-center gap-10">
-        <Image src={logo} alt="Mock image" />
+        <Image src={about} alt="Mock image" width={500} />
         <p className="w-2/5 text-xl text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veniam
           laudantium laborum dicta, amet autem unde. Temporibus debitis
