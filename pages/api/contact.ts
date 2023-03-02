@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 const user = process.env.GMAIL_USER;
-const pass = process.env.PASSWORD;
+const pass = process.env.GMAIL_PASSWORD;
 
 export default function contact(req: NextApiRequest, res: NextApiResponse) {
   const transporter = nodemailer.createTransport({
