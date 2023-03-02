@@ -7,7 +7,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="flex items-center justify-between min-h-screen mb-64"
+      className="min-h-screen flex justify-center items-center gap-10"
     >
       <div className="flex justify-center flex-col gap-10 w-3/5">
         <div className="w-full flex flex-col gap-4">
@@ -42,6 +42,7 @@ function Hero() {
           src={profile}
           alt="A photograph of Mert Guler"
           className="rounded-full border-[6px] border-white w-4/5"
+          priority
         />
       </div>
     </section>

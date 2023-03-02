@@ -1,6 +1,7 @@
 import { useState } from "react";
 import sendMessage, { MessageType } from "../api/send-message";
 
+// TODO: add message submitted information message somewhere
 function Contact() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -28,7 +29,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen p-36 flex  items-center flex-col gap-4"
+      className="min-h-screen flex justify-center items-center flex-col gap-10"
     >
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white ">
@@ -108,7 +109,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            className="text-white w-full bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
           >
             Send Message
           </button>
