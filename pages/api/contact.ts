@@ -20,7 +20,7 @@ export default function contact(req: NextApiRequest, res: NextApiResponse) {
     to: user,
     subject: `${req.body.subject} | ${req.body.name}`,
     text: req.body.message,
-    html: `<h3>${req.body.subject}</h3><p>${req.body.message}</p><p>${req.body.name}</p>`,
+    html: `<h3>${req.body.subject}</h3><p>${req.body.message}</p><p>${req.body.email}</p><p>${req.body.name}</p>`,
   };
 
   transporter.sendMail(mailData, function (err, info) {
