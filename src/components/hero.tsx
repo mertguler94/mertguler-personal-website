@@ -2,8 +2,13 @@ import profile from "../../public/mert.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import { socialLinks } from "../util/social";
+import Greeting from "./greeting";
+import styles from "./hero.module.css";
 
 function Hero() {
+  const greeting = "Hey, I'm ".split("");
+  const name = "Mert!".split("");
+
   return (
     <section
       id="hero"
@@ -11,9 +16,21 @@ function Hero() {
     >
       <div className="flex justify-center flex-col gap-10 w-3/5">
         <div className="w-full flex flex-col gap-4">
-          <h1 className="text-9xl my-4">
+          <div className="text-9xl my-4 flex">
+            {greeting.map((letter, idx) => (
+              <Greeting key={idx} letter={letter} />
+            ))}
+            {name.map((letter, idx) => (
+              <Greeting
+                key={idx}
+                letter={letter}
+                className="text-[#4fadfd] font-bold"
+              />
+            ))}
+          </div>
+          {/* <h1 className=>
             Hey, I&apos;m <strong className="text-[#4fadfd]">Mert!</strong>
-          </h1>
+          </h1> */}
           <h2 className="text-5xl my-4">
             <i className="text-[#82b556]">Front End Developer</i> from Toronto!
           </h2>
@@ -37,14 +54,25 @@ function Hero() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center">
+      <div
+        className={`flex justify-center w-fit rounded-full bg-gradient-to-br from-red-300 via-green-300 to-white ${styles.imageDiv}`}
+      >
+        <Image
+          src={profile}
+          alt="A photograph of Mert Guler"
+          className={`rounded-full p-2 ${styles.image}`}
+          priority
+        />
+      </div>
+
+      {/* <div className="flex justify-center">
         <Image
           src={profile}
           alt="A photograph of Mert Guler"
           className="rounded-full border-[6px] border-white w-4/5"
           priority
         />
-      </div>
+      </div> */}
     </section>
   );
 }
