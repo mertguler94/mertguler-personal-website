@@ -21,7 +21,7 @@ function Portfolio() {
       className="min-h-screen flex justify-center items-center flex-col gap-10"
     >
       <div>
-        <h1 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white ">
+        <h1 className="mb-4 t text-3xl lg:text-6xl  tracking-tight font-extrabold text-center text-white ">
           Portfolio
         </h1>
         <p className="text-center tracking-tight">
@@ -29,7 +29,7 @@ function Portfolio() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-24 items-center">
+      <div className="grid grid-cols-3 gap-24 items-center overflow-hidden">
         {repos.map((repo) => (
           <RepoCard key={repo.id} repo={repo} />
         ))}

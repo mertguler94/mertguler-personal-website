@@ -7,14 +7,14 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex justify-center items-center gap-10"
+      className="min-h-screen flex flex-col-reverse lg:flex-row justify-center items-center gap-10"
     >
-      <div className="flex justify-center flex-col gap-10 w-3/5">
+      <div className="flex justify-center flex-col gap-10 lg:w-3/5 w-full">
         <div className="w-full flex flex-col gap-4">
-          <h1 className="text-9xl my-4">
+          <h1 className="lg:text-9xl text-5xl my-4">
             Hey, I&apos;m <strong className="text-[#4fadfd]">Mert!</strong>
           </h1>
-          <h2 className="text-5xl my-4">
+          <h2 className="lg:text-5xl text-3xl my-4">
             <i className="text-[#82b556]">Front End Developer</i> from Toronto!
           </h2>
           <p className="leading-8 text-xl">
@@ -29,7 +29,7 @@ function Hero() {
           </p>
         </div>
         {/* social media icons */}
-        <div className="flex gap-10">
+        <div className="flex gap-10 lg:justify-start justify-center">
           {socialLinks.map((social) => (
             <Link key={social.id} href={social.href} target="_blank">
               <social.icon size={48} className="hover:text-[#4fadfd]" />
