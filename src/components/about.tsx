@@ -18,13 +18,13 @@ function About() {
       id="about"
       className="min-h-screen flex justify-center items-center flex-col gap-10"
     >
-      <h1 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white  ">
+      <h1 className="mb-4  text-3xl lg:text-6xl tracking-tight font-extrabold text-center text-white  ">
         About Me
       </h1>
       <div className="flex justify-center items-center flex-col">
-        <div className="flex justify-center items-center gap-10">
+        <div className="flex lg:flex-row flex-col justify-center items-center gap-10">
           <Image src={about} alt="Mock image" width={500} priority />
-          <div className="flex flex-col gap-3 text-lg w-3/5">
+          <div className="flex flex-col gap-3 text-lg lg:w-3/5 w-full">
             {/* TODO: make some sentences or words going forward. add some styles. */}
             <p>
               Hi there! I&apos;m Mert Guler, a front-end engineer with a passion

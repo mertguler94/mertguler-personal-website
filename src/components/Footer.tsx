@@ -3,8 +3,8 @@ import { socialLinks } from "../util/social";
 
 function Footer() {
   return (
-    <footer className="p-10 bg-gray-700 sm:p-10 ">
-      <div className="sm:flex sm:items-center sm:justify-between flex-col gap-10">
+    <footer className="p-10 bg-gray-700 ">
+      <div className="sm:flex sm:items-center sm:justify-between items-center flex-col gap-10">
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <div className="flex gap-10">
             {socialLinks.map((social) => (

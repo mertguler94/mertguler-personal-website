@@ -12,9 +12,9 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex justify-center items-center gap-10"
+      className="min-h-screen flex flex-col-reverse lg:flex-row justify-center items-center gap-10"
     >
-      <div className="flex justify-center flex-col gap-10 w-3/5">
+      <div className="flex justify-center flex-col gap-10 lg:w-3/5 w-full">
         <div className="w-full flex flex-col gap-4">
           <div className="text-9xl my-4 flex">
             {greeting.map((letter, idx) => (
@@ -46,7 +46,7 @@ function Hero() {
           </p>
         </div>
         {/* social media icons */}
-        <div className="flex gap-10">
+        <div className="flex gap-10 lg:justify-start justify-center">
           {socialLinks.map((social) => (
             <Link key={social.id} href={social.href} target="_blank">
               <social.icon size={48} className="hover:text-[#4fadfd]" />
