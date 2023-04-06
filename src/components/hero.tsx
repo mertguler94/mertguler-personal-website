@@ -54,13 +54,11 @@ function Hero() {
           ))}
         </div>
       </div>
-      <div
-        className={`flex justify-center w-fit rounded-full bg-gradient-to-br from-red-300 via-green-300 to-white ${styles.imageDiv}`}
-      >
+      <div className={`flex justify-center w-fit rounded-full`}>
         <Image
           src={profile}
           alt="A photograph of Mert Guler"
-          className={`rounded-full p-2 ${styles.image}`}
+          className={`rounded-full border-[6px] border-white`}
           priority
         />
       </div>
