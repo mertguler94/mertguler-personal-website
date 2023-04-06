@@ -33,7 +33,7 @@ export default function Greeting({
         !isPlaying && transform();
       }}
       onAnimationComplete={() => setIsPlaying(false)}
-      className={`z-0 ${className ?? ""}`}
+      className={`z-10 ${className ?? ""}`}
     >
       {letter === " " ? "\u00A0" : letter}
     </motion.h1>

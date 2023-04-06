@@ -14,11 +14,11 @@ function Navbar() {
   }, []);
 
   return (
-    <header className=" h-40 lg:h-20 sticky top-0">
+    <header className="h-40 lg:h-20 sticky top-0 z-50">
       <nav
         className={`${
           sticky ? "bg-black opacity-90" : "bg-transparent"
-        } border-gray-200 px-48 py-2.5 w-full  transition-all ease-in-out z-50
+        } border-gray-200 lg:px-48 px-4 py-8 lg:py-2.5 w-full relative transition-all ease-in-out z-50
         duration-300`}
       >
         <div className="container flex flex-wrap lg:flex-row flex-col items-center justify-between mx-auto">

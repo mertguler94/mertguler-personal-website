@@ -13,7 +13,9 @@ function Layout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="min-h-screen lg:px-48 px-20">{children}</main>
+      <main className="min-h-screen lg:px-48 px-12 overflow-x-hidden">
+        {children}
+      </main>
       <Footer />
     </>
   );

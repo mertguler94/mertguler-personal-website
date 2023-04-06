@@ -8,9 +8,13 @@ interface RepoCardProps {
 
 export default function RepoCard({ repo }: RepoCardProps) {
   return (
-    <div className="flex flex-col gap-2">
-      <h4 className="font-bold text-2xl">{repo.name}</h4>
-      <p className="text-gray-400">{repo.description}</p>
+    <div className="flex flex-col gap-2 lg:items-start items-center">
+      <h4 className="font-bold text-xl lg:text-2xl text-center lg:text-left">
+        {repo.name}
+      </h4>
+      <p className="text-gray-400 text-center lg:text-left">
+        {repo.description}
+      </p>
       <Link
         className="mt-3 w-fit relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden
         text-sm font-medium rounded-lg group bg-gradient-to-br from-green-400 to-blue-600

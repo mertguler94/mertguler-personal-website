@@ -30,7 +30,7 @@ export default function Home() {
       {isGoTopShown && (
         <BsFillArrowUpCircleFill
           size={48}
-          className="fixed bottom-8 right-8 cursor-pointer hover:text-[#4fadfd]"
+          className="fixed bottom-8 lg:right-8 right-3 cursor-pointer hover:text-[#4fadfd] lg:scale-100 scale-75"
           onClick={() => window.scrollTo(0, 0)}
         />
       )}

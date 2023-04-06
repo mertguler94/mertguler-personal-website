@@ -16,9 +16,9 @@ function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex justify-center items-center flex-col gap-10"
+      className="min-h-screen flex justify-center items-center flex-col lg:gap-10 gap-2 lg:p-0 py-10"
     >
-      <h1 className="mb-4  text-3xl lg:text-6xl tracking-tight font-extrabold text-center text-white  ">
+      <h1 className="mb-4 text-3xl lg:text-6xl tracking-tight font-extrabold text-center text-white  ">
         About Me
       </h1>
       <div className="flex justify-center items-center flex-col">
