@@ -32,7 +32,10 @@ function Contact() {
       className="min-h-screen flex justify-center items-center flex-col gap-10 lg:p-0 py-10"
     >
       <div className="py-8 lg:py-16 px-4 mx-auto lg:max-w-screen-md">
-        <h2 className="mb-4 text-3xl lg:text-6xl tracking-tight font-extrabold text-center text-white ">
+        <h2
+          id="contact-title"
+          className="mb-4 text-3xl lg:text-6xl tracking-tight font-extrabold text-center text-white "
+        >
           Contact Me
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-300  sm:text-xl">

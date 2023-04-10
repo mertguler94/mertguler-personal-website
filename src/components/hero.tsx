@@ -16,7 +16,7 @@ function Hero() {
     >
       <div className="flex justify-center flex-col gap-10 lg:w-3/5 w-full">
         <div className="w-full flex flex-col gap-4">
-          <div className="lg:text-9xl text-5xl my-4 flex z-10">
+          <div className="lg:text-9xl text-5xl my-4 flex z-10 justify-center lg:justify-start">
             {greeting.map((letter, idx) => (
               <Greeting key={idx} letter={letter} />
             ))}

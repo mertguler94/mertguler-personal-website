@@ -3,6 +3,7 @@ export interface RepoInterface {
   url: string;
   name: string;
   description: string;
+  homepage: string;
 }
 
 export default async function getRepositories() {
@@ -26,6 +27,7 @@ export default async function getRepositories() {
             name: repo.name,
             description: repo.description,
             url: repo.svn_url,
+            homepage: repo.homepage,
           };
         })
       );
