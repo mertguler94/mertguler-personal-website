@@ -32,17 +32,18 @@ function Hero() {
             Hey, I&apos;m <strong className="text-[#4fadfd]">Mert!</strong>
           </h1> */}
           <h2 className="lg:text-5xl text-3xl my-4 lg:text-left text-center">
-            <i className="text-[#82b556]">Front End Developer</i> from Toronto!
+            <i className="text-[#82b556]">Full Stack Developer</i> from Toronto!
           </h2>
           <p className="leading-8 text-xl lg:text-left text-center">
             Hello (or <strong>Merhaba</strong> as in Turkish), welcome to my
             personal website.
           </p>
           <p className="leading-8 text-xl lg:text-left text-center">
-            A highly motivated Front-End React.js Developer with experience
-            using React, TypeScript, Next.js, and Tailwind. Delivers
-            high-quality, responsive and progressive web applications that meet
-            user and business needs with strong problem-solving skills.
+            A proficient Full Stack Developer well-versed in React.js, Next.js,
+            Node.js, Firebase, TypeScript, Google Cloud and much more. Building
+            efficient web and mobile applications, their backend systems,
+            optimizing user experiences, and expertly managing cloud
+            infrastructure and CI/CD pipelines.
           </p>
         </div>
         {/* social media icons */}

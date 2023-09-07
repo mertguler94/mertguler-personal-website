@@ -29,22 +29,28 @@ function About() {
           <Image src={about} alt="Mock image" width={500} priority />
           <div className="flex flex-col gap-3 text-lg lg:w-3/5 w-full">
             {/* TODO: make some sentences or words going forward. add some styles. */}
+            {/*     */}
             <p>
-              Hi there! I&apos;m Mert Guler, a front-end engineer with a passion
-              for creating beautiful and intuitive web applications.{" "}
+              Hello, I&apos;m Mert Guler, a versatile Full Stack Developer with
+              a background in structural engineering and a passion for crafting
+              seamless and impactful web applications.
             </p>{" "}
             <p>
-              I used to work as a structural engineer for 3 years before I
-              realized my true calling was in software development. Since then,
-              I&apos;ve been honing my skills in front-end engineering, working
-              on various projects using cutting-edge technologies and
-              frameworks.
+              With a foundation in structural engineering, I spent three years
+              gaining problem-solving skills and a meticulous attention to
+              detail. However, my true calling emerged in the world of software
+              development. Over the years, I&apos;ve dedicated myself to
+              mastering the intricacies of both front-end and back-end
+              technologies, utilizing cutting-edge tools and frameworks to bring
+              innovative ideas to life.
             </p>
             <p>
-              Currently, I&apos;m working on a mentorship platform that I&apos;m
-              very excited about. It&apos;s been an amazing opportunity to
-              combine my technical expertise with my desire to make a positive
-              impact on people&apos;s lives.
+              My current focus revolves around a thrilling project: a platform
+              like Uber for car detailers, that bridges my technical prowess
+              with my commitment to enhancing people&apos;s lives. This endeavor
+              has allowed me to combine my skills in React.js, Next.js,
+              Firebase, Node.js, and more, resulting in a dynamic and impactful
+              solution.
             </p>
             <p>
               When I&apos;m not coding, you can usually find me exploring new
@@ -53,22 +59,23 @@ function About() {
             </p>
             <p>
               {" "}
-              I believe that my experience in both engineering and software
-              development gives me a unique perspective that allows me to
-              approach problems in creative and innovative ways.
+              My unique blend of engineering and software development experience
+              enables me to tackle challenges with a creative and innovative
+              mindset.
             </p>{" "}
             <p>
-              I&apos;m always eager to take on new challenges and learn new
-              skills, and I&apos;m excited about the possibilities that lie
-              ahead. If you&apos;re interested in learning more about my work or
-              have a project you&apos;d like to collaborate on, feel free to get
-              in touch! I&apos;d love to hear from you. You can also check my
-              resume from below.
+              I thrive on embracing fresh opportunities, acquiring new skills,
+              and am enthusiastic about the limitless potential that lies ahead.
+              If you&apos;re interested in discussing my work, exploring
+              potential collaborations, or simply connecting, please don&apos;t
+              hesitate to reach out. I&apos;m eager to hear from you and excited
+              about the exciting journeys we can embark on together. You can
+              reach out to me if you need my resume.
             </p>
           </div>
         </div>
 
-        <button
+        {/* <button
           type="button"
           className="mt-3 w-fit relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden
         text-sm font-medium rounded-lg group bg-gradient-to-br from-green-400 to-blue-600
@@ -79,7 +86,7 @@ function About() {
             View Resume
           </span>
         </button>
-        <ViewResume isOpen={isOpen} closeModal={closeModal} />
+        <ViewResume isOpen={isOpen} closeModal={closeModal} /> */}
       </div>
     </section>
   );
