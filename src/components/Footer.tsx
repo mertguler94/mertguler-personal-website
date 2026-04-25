@@ -3,31 +3,41 @@ import { socialLinks } from "../util/social";
 
 function Footer() {
   return (
-    <footer className="p-10 bg-slate-900 flex justify-center">
-      <div className="flex sm:items-center sm:justify-between items-center flex-col gap-6 lg:gap-10">
-        <div className="flex mt-4 space-x-6 lg:space-x-0 justify-center sm:mt-0">
-          <div className="flex gap-10 justify-center">
-            {socialLinks.map((social) => (
-              <Link key={social.id} href={social.href} target="_blank">
-                <social.icon
-                  size={24}
-                  className="text-gray-200 hover:text-[#4fadfd]"
-                />
-              </Link>
-            ))}
-          </div>
+    <footer className="bg-surface-dim w-full py-20 px-8 border-t border-white/5">
+      <div className="flex flex-col md:flex-row justify-between items-center max-w-5xl mx-auto space-y-8 md:space-y-0">
+        <div className="text-center md:text-left">
+          <span className="font-heading text-xl italic text-primary">
+            Mert Guler
+          </span>
+          <p className="text-base text-on-surface-variant mt-2">
+            Handcrafted with intention © 2026
+          </p>
         </div>
-        <div className="flex flex-col gap-4 justify-center">
-          <span className="text-sm text-gray-400 text-center ">
-            Made with ❤️
-          </span>
-          <span className="text-sm text-gray-400 sm:text-center">
-            © {new Date().getFullYear().toString()}{" "}
-            <Link href="/" className="hover:underline">
-              Mert Guler
+
+        <div className="flex gap-8 text-sm text-on-surface-variant">
+          <Link href="#story" className="hover:text-primary transition-colors duration-300">
+            Story
+          </Link>
+          <Link href="#thoughts" className="hover:text-primary transition-colors duration-300">
+            Thoughts
+          </Link>
+          <Link href="#contact" className="hover:text-primary transition-colors duration-300">
+            Let&apos;s Chat
+          </Link>
+        </div>
+
+        <div className="flex gap-4">
+          {socialLinks.map((social) => (
+            <Link
+              key={social.id}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all"
+            >
+              <social.icon size={20} />
             </Link>
-            . All Rights Reserved.
-          </span>
+          ))}
         </div>
       </div>
     </footer>
