@@ -1,80 +1,84 @@
-import profile from "../../public/mert.jpg";
 import Image from "next/image";
+import profile from "../../public/mert.jpg";
 import Link from "next/link";
 import { socialLinks } from "../util/social";
-import Greeting from "./greeting";
-import styles from "./hero.module.css";
+import { motion } from "framer-motion";
 
 function Hero() {
-  const greeting = "Hey, I'm ".split("");
-  const name = "Mert!".split("");
+  const interests = [
+    { icon: "🪁", label: "Full Stack Developer" },
+    { icon: "🧭", label: "Tech Explorer" },
+    { icon: "☕", label: "Coffee Enthusiast" },
+  ];
 
   return (
-    <section
-      id="hero"
-      className="min-h-screen flex flex-col-reverse lg:flex-row justify-center items-center gap-10 lg:p-0 py-10"
-    >
-      <div className="flex justify-center flex-col gap-10 lg:w-3/5 w-full">
-        <div className="w-full flex flex-col gap-4">
-          <div className="lg:text-9xl text-5xl my-4 flex z-10 justify-center lg:justify-start">
-            {greeting.map((letter, idx) => (
-              <Greeting key={idx} letter={letter} />
-            ))}
-            {name.map((letter, idx) => (
-              <Greeting
-                key={idx}
-                letter={letter}
-                className="text-[#4fadfd] font-bold"
-              />
-            ))}
-          </div>
-          {/* <h1 className=>
-            Hey, I&apos;m <strong className="text-[#4fadfd]">Mert!</strong>
-          </h1> */}
-          <h2 className="lg:text-5xl text-3xl my-4 lg:text-left text-center">
-            <i className="text-[#82b556]">Full Stack Developer</i> from Toronto!
-          </h2>
-          <p className="leading-8 text-xl lg:text-left text-center">
-            Hello (or <strong>Merhaba</strong> as in Turkish), welcome to my
-            personal website.
-          </p>
-          <p className="leading-8 text-xl lg:text-left text-center">
-            A proficient Full Stack Developer well-versed in React.js, Next.js,
-            Node.js, Firebase, TypeScript, Google Cloud and much more. Building
-            efficient web and mobile applications, their backend systems,
-            optimizing user experiences, and expertly managing cloud
-            infrastructure and CI/CD pipelines.
-          </p>
+    <section className="min-h-screen flex flex-col items-center justify-center pt-32 pb-12 px-margin text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto space-y-8"
+      >
+        <div className="inline-block px-4 py-1.5 bg-surface-container-high text-primary rounded-full text-sm mb-4 border border-primary/20">
+          Welcome to my corner
         </div>
-        {/* social media icons */}
-        <div className="flex gap-10 lg:justify-start justify-center z-10">
-          {socialLinks.map((social) => (
-            <Link key={social.id} href={social.href} target="_blank">
-              <social.icon
-                size={48}
-                className="hover:text-[#4fadfd] lg:scale-0 scale-75 z-0"
-              />
-            </Link>
+
+        <h1 className="font-heading text-h1 text-on-surface md:text-6xl max-w-3xl mx-auto">
+          Hi, I&apos;m <span className="italic text-primary">Mert</span>, and I&apos;m glad you&apos;re here.
+        </h1>
+
+        <p className="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+          This is a space where I share my explorations in web development, my love for building great user experiences, and the small things that spark curiosity in my daily life.
+        </p>
+
+        <div className="pt-8 flex flex-wrap justify-center gap-4">
+          {interests.map((item) => (
+            <div
+              key={item.label}
+              className="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full border border-outline-variant/30 text-on-surface"
+            >
+              <span>{item.icon}</span>
+              <span className="text-sm">{item.label}</span>
+            </div>
           ))}
         </div>
-      </div>
-      <div className={`flex justify-center w-fit rounded-full`}>
-        <Image
-          src={profile}
-          alt="A photograph of Mert Guler"
-          className={`rounded-full border-[6px] border-white`}
-          priority
-        />
-      </div>
+      </motion.div>
 
-      {/* <div className="flex justify-center">
-        <Image
-          src={profile}
-          alt="A photograph of Mert Guler"
-          className="rounded-full border-[6px] border-white w-4/5"
-          priority
-        />
-      </div> */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="mt-12 w-full max-w-2xl px-6"
+      >
+        <div className="relative aspect-[4/5] max-w-sm mx-auto rounded-[32px] overflow-hidden shadow-2xl shadow-black/50 group border border-white/5">
+          <Image
+            src={profile}
+            alt="A photograph of Mert Guler"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface/60 to-transparent"></div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="flex gap-8 mt-12"
+      >
+        {socialLinks.map((social) => (
+          <Link
+            key={social.id}
+            href={social.href}
+            target="_blank"
+            rel="noreferrer"
+            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all"
+          >
+            <social.icon size={20} />
+          </Link>
+        ))}
+      </motion.div>
     </section>
   );
 }
